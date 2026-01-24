@@ -7,9 +7,9 @@ export default defineNuxtConfig({
   app: {
     baseURL: '/emu3000-seat/',
     head: {
-      title: 'EMU3000 座位查詢器 | 靠窗視野與地雷位分析',
+      title: 'EMU3000 新自強號火車座位方位查詢器｜秒懂山/海景、靠窗/走道的物理方位 (含騰雲座艙)',
       meta: [
-        { name: 'description', content: '2026 最新版台鐵 EMU3000 座位查詢。即時判斷靠窗、走道、窗框地雷位與山海景。' }
+        { name: 'description', content: '精準查詢 EMU3000 新自強號火車座位，提供視覺化山/海景判定、靠窗/走道的物理位置。' }
       ]
     }
   }
