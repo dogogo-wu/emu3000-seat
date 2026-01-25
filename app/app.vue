@@ -104,9 +104,9 @@ const analysis = computed(() => {
 
       <div class="min-h-[380px] md:min-h-[420px] flex flex-col relative">
         <div class="h-14 flex items-center justify-center">
-          <div v-show="direction === 'north'" class="flex flex-col items-center animate-pulse">
+          <div v-if="direction === 'north'" class="flex flex-col items-center animate-pulse">
             <span class="text-[11px] md:text-[12px] font-black text-orange-600 tracking-widest uppercase">Front 往台北</span>
-            <UIcon name="i-heroicons-chevron-double-up-20-solid" class="w-8 md:w-10 h-8 md:h-10 text-orange-500" />
+            <svg class="w-8 md:w-10 h-8 md:h-10 text-orange-500" viewBox="0 0 20 20"><path fill="currentColor" fill-rule="evenodd" d="M9.47 4.72a.75.75 0 0 1 1.06 0l4.25 4.25a.75.75 0 1 1-1.06 1.06L10 6.31l-3.72 3.72a.75.75 0 1 1-1.06-1.06zm-4.25 9.25l4.25-4.25a.75.75 0 0 1 1.06 0l4.25 4.25a.75.75 0 1 1-1.06 1.06L10 11.31l-3.72 3.72a.75.75 0 0 1-1.06-1.06" clip-rule="evenodd"/></svg>
           </div>
         </div>
 
@@ -147,11 +147,11 @@ const analysis = computed(() => {
               </div>
 
               <div v-else-if="analysis?.error" class="h-full bg-red-50 border-2 border-red-100 rounded-[3rem] p-8 flex flex-col items-center justify-center text-center">
-                <UIcon name="i-heroicons-exclamation-circle" class="w-12 h-12 text-red-400 mb-2" />
+                <svg class="w-12 h-12 text-red-400 mb-2" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 9v3.75m9-.75a9 9 0 1 1-18 0a9 9 0 0 1 18 0m-9 3.75h.008v.008H12z"/></svg>
                 <p class="text-red-500 font-black text-sm">{{ analysis.error }}</p>
               </div>
               <div v-else class="h-full border-4 border-dashed border-orange-100 rounded-[3rem] flex flex-col items-center justify-center text-slate-200 p-8">
-                <UIcon name="i-heroicons-magnifying-glass" class="w-12 h-12 mb-4 opacity-10 text-orange-400" />
+                <svg class="w-12 h-12 mb-4 opacity-10 text-orange-400" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="m21 21l-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607"/></svg>
                 <p class="font-bold text-[10px] tracking-[0.3em] uppercase text-orange-300">Enter Seat Number</p>
               </div>
             </Transition>
@@ -163,8 +163,8 @@ const analysis = computed(() => {
         </div>
 
         <div class="h-14 flex items-center justify-center mt-4">
-          <div v-show="direction === 'south'" class="flex flex-col items-center animate-pulse">
-            <UIcon name="i-heroicons-chevron-double-down-20-solid" class="w-8 md:w-10 h-8 md:h-10 text-orange-500" />
+          <div v-if="direction === 'south'" class="flex flex-col items-center animate-pulse">
+            <svg class="w-8 md:w-10 h-8 md:h-10 text-orange-500" viewBox="0 0 20 20"><path fill="currentColor" fill-rule="evenodd" d="M9.47 15.28a.75.75 0 0 0 1.06 0l4.25-4.25a.75.75 0 1 0-1.06-1.06L10 13.69L6.28 9.97a.75.75 0 0 0-1.06 1.06zM5.22 6.03l4.25 4.25a.75.75 0 0 0 1.06 0l4.25-4.25a.75.75 0 0 0-1.06-1.06L10 8.69L6.28 4.97a.75.75 0 0 0-1.06 1.06" clip-rule="evenodd"/></svg>
             <span class="text-[11px] md:text-[12px] font-black text-orange-600 mt-1 uppercase tracking-widest">Front 往花東</span>
           </div>
         </div>
@@ -173,7 +173,7 @@ const analysis = computed(() => {
 
     <footer class="relative w-full max-w-md text-center mt-auto py-8 text-[10px] text-slate-400 ">
       Copyright © 2026 Leon Wu (dogogo-wu). All rights reserved.
-      <div class="absolute right-0 bottom-0 text-orange-300">ver 1.1</div>
+      <div class="absolute right-0 bottom-0 text-orange-300">ver 1.2</div>
     </footer>
   </div>
 </template>

@@ -2,7 +2,10 @@
 export default defineNuxtConfig({
   compatibilityDate: '2025-07-15',
   devtools: { enabled: true },
-  modules: ['@nuxt/ui'],
+  modules: ['@nuxt/ui', 'nuxt-gtag'],
+  gtag: {
+    id: 'G-92GCKQ7C8B'
+  },
   css: ['~/assets/css/main.css'],
   app: {
     baseURL: '/emu3000-seat/',
