@@ -104,7 +104,7 @@ const analysis = computed(() => {
 
       <div class="min-h-[380px] md:min-h-[420px] flex flex-col relative">
         <div class="h-14 flex items-center justify-center">
-          <div v-if="direction === 'north'" class="flex flex-col items-center animate-pulse">
+          <div v-show="direction === 'north'" class="flex flex-col items-center animate-pulse">
             <span class="text-[11px] md:text-[12px] font-black text-orange-600 tracking-widest uppercase">Front 往台北</span>
             <UIcon name="i-heroicons-chevron-double-up-20-solid" class="w-8 md:w-10 h-8 md:h-10 text-orange-500" />
           </div>
@@ -163,7 +163,7 @@ const analysis = computed(() => {
         </div>
 
         <div class="h-14 flex items-center justify-center mt-4">
-          <div v-if="direction === 'south'" class="flex flex-col items-center animate-pulse">
+          <div v-show="direction === 'south'" class="flex flex-col items-center animate-pulse">
             <UIcon name="i-heroicons-chevron-double-down-20-solid" class="w-8 md:w-10 h-8 md:h-10 text-orange-500" />
             <span class="text-[11px] md:text-[12px] font-black text-orange-600 mt-1 uppercase tracking-widest">Front 往花東</span>
           </div>
@@ -173,7 +173,7 @@ const analysis = computed(() => {
 
     <footer class="relative w-full max-w-md text-center mt-auto py-8 text-[10px] text-slate-400 ">
       Copyright © 2026 Leon Wu (dogogo-wu). All rights reserved.
-      <div class="absolute right-0 bottom-0 text-orange-300">ver 1.0</div>
+      <div class="absolute right-0 bottom-0 text-orange-300">ver 1.1</div>
     </footer>
   </div>
 </template>
