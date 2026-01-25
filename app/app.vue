@@ -6,18 +6,18 @@ const seatInput = ref('')
 
 // 2. 定義車廂配置
 const carConfigs = {
-  1:  { max: 40, type: '駕駛端 / 大件行李', isReversed: false },
+  1:  { max: 40, type: '駕駛端', isReversed: false },
   2:  { max: 52, type: '標準車廂', isReversed: false },
   3:  { max: 40, type: '輪椅友善車', isReversed: false, skip: [3, 4] },
   4:  { max: 52, type: '標準車廂', isReversed: false },
   5:  { max: 52, type: '標準車廂', isReversed: false },
-  6:  { max: 30, type: '騰雲座艙', isReversed: false, business: true },
+  6:  { max: 40, type: '騰雲座艙', isReversed: false, business: true },
   7:  { max: 28, type: '友善設施車', isReversed: false, skip: [3, 4] },
   8:  { max: 52, type: '標準車廂', isReversed: false },
   9:  { max: 52, type: '標準車廂', isReversed: true },
   10: { max: 52, type: '標準車廂', isReversed: true },
   11: { max: 52, type: '標準車廂', isReversed: true },
-  12: { max: 38, type: '駕駛端 / 大件行李', isReversed: true }
+  12: { max: 38, type: '駕駛端', isReversed: true }
 }
 
 // 3. 核心邏輯 (包含騰雲座艙排除 2+4n 與 9-12車物理反轉)
@@ -30,7 +30,7 @@ const analysis = computed(() => {
   
   // 排除不存在座位
   if (config.business) {
-    if (sn % 4 === 2) return { error: `⚠️ 騰雲座艙不存在 ${sn} 號 (無此編號)` }
+    if (sn % 4 === 2) return { error: `⚠️ 騰雲座艙不存在 ${sn} 號` }
   } else {
     if (config.skip?.includes(sn)) return { error: `⚠️ 座位 ${sn} 號不存在` }
   }
@@ -173,7 +173,7 @@ const analysis = computed(() => {
 
     <footer class="relative w-full max-w-md text-center mt-auto py-8 text-[10px] text-slate-400 ">
       Copyright © 2026 Leon Wu (dogogo-wu). All rights reserved.
-      <div class="absolute right-0 bottom-0 text-orange-300">ver 1.2</div>
+      <div class="absolute right-0 bottom-0 text-orange-300">ver 1.3</div>
     </footer>
   </div>
 </template>
