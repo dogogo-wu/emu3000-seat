@@ -139,7 +139,7 @@ const analysis = computed(() => {
                         {{ s }}
                       </div>
                       <span class="text-[11px] mt-3 font-bold opacity-30 tracking-tighter">
-                        {{ (carConfigs[carNumber as keyof typeof carConfigs].business) ? (i===0 || i===3 ? '窗' : '走') : (i===0 || i===4 ? '窗' : '走') }}
+                        {{ (carConfigs[carNumber as keyof typeof carConfigs].business) ? (i===0 || i===3 ? '窗' : '道') : (i===0 || i===4 ? '窗' : '道') }}
                       </span>
                     </template>
                   </div>
@@ -173,7 +173,7 @@ const analysis = computed(() => {
 
     <footer class="relative w-full max-w-md text-center mt-auto py-8 text-[10px] text-slate-400 ">
       Copyright © 2026 Leon Wu (dogogo-wu). All rights reserved.
-      <div class="absolute right-0 bottom-0 text-orange-300">ver 1.3</div>
+      <div class="absolute right-0 bottom-0 text-orange-300">ver 1.4</div>
     </footer>
   </div>
 </template>
